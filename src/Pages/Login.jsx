@@ -9,7 +9,6 @@ import {
   IconButton,
   CircularProgress,
 } from "@mui/material";
-import { useState } from "react";
 import MailIcon from "@mui/icons-material/Mail";
 import KeyIcon from "@mui/icons-material/Key";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -18,8 +17,9 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import { useContext, useState } from "react";
 //imports from another files
+import { Context } from "../App";
 import Logo from "../../public/logo.jpg";
 //component styles
 const Container = styled(Box)`
@@ -39,6 +39,7 @@ const InputBox = styled(Box)`
 `;
 
 const Login = () => {
+  const {setUser} = useContext(Context)
   // handles hide and unhide
   const [showPassword, setShowPassword] = useState(false);
   // stores data of user (email, password) and loading animation
@@ -52,8 +53,9 @@ const Login = () => {
     e.preventDefault();
     try {
       setLoading(true)
-      const user = await axios.post(`${import.meta.env.VITE_APP_SERVER_URL}/auth/login`,{email, password});
+      const user = await axios.post(`${import.meta.env.VITE_APP_SERVER_URL}/authUser/login`,{email, password});
       console.log({user})
+      setUser(user)
       setLoading(false)
       navigate("/")
       toast.success("Login Successful",{position:'top-center'})

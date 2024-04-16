@@ -5,14 +5,14 @@ import "react-toastify/dist/ReactToastify.css"
 import { CssBaseline, ThemeProvider } from "@mui/material";
 export const Context = createContext()
 //Imports from another files
-import {Home, Login,SignUp,Account,Bookings,ConformBooking,Success,NotFound} from './Pages'
+import {Home, Login,SignUp,Bookings,Success,NotFound} from './Pages'
 import Header from './Components/Header';
 import Theme from './theme';
 import Footer from './Components/Footer';
 
 
 function App() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
   return (
     <ThemeProvider theme={Theme}>
       <Context.Provider value={{ user, setUser }}>
@@ -23,9 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/account" element={<Account />} />
           <Route path="/bookings" element={<Bookings />} />
-          <Route path="/conformBooking" element={<ConformBooking />} />
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

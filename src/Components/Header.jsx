@@ -56,13 +56,18 @@ const Header = () => {
           <Items>Learn More</Items>
           {user ? (
             <>
-              <Button variant="contained"  sx={{marginBottom:'1rem', display:'block'}}>My Bookings</Button>
-              <Button variant="contained" >
-                Logout
+              <Button
+                variant="contained"
+                sx={{ marginBottom: "1rem", display: "block" }}
+              >
+                My Bookings
               </Button>
+              <Button variant="contained">Logout</Button>
             </>
           ) : (
-            <Button variant="contained">Login</Button>
+            <Button variant="contained" onClick={() => navigate("/login")}>
+              Login
+            </Button>
           )}
         </List>
       </div>
@@ -101,7 +106,12 @@ const Header = () => {
                 {user ? (
                   <Button variant="outlined">Account</Button>
                 ) : (
-                  <Button variant="contained">Login</Button>
+                  <Button
+                    variant="contained"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login
+                  </Button>
                 )}
               </Box>
               <IconButton

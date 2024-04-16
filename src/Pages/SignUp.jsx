@@ -60,7 +60,7 @@ const Login = () => {
       return toast.error("Passwords do not match", { position: "top-center" });
     }
     try {
-       await axios.post(`${import.meta.env.VITE_APP_SERVER_URL}/auth/register`, {
+       await axios.post(`${import.meta.env.VITE_APP_SERVER_URL}/authUser/register`, {
         name,
         email,
         password,
