@@ -37,7 +37,7 @@ const Header = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const { user } = useContext(Context);
+  const { user,setUser } = useContext(Context);
 
   const drawerContent = (
     <div>
@@ -126,8 +126,8 @@ const Header = () => {
                     open={open}
                     onClose={handleClose}   
                   >
-                    <MenuItem>Profile</MenuItem>
-                    <MenuItem>Logout</MenuItem>
+                    <MenuItem>Bookings</MenuItem>
+                    <MenuItem onClick={()=> setUser(null)}>Logout</MenuItem>
                   </Menu>
                 </>
               ) : (

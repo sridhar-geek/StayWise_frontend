@@ -13,44 +13,13 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import { useLocation } from "react-router-dom";
-/** Import modules form another files  */
-import Microsoft from '../assests/microsoft.png'
-import Playstore from '../assests/playstore.png'
-import Appstore from '../assests/appStore.png'
+
 
 //component styles
-const Container = styled(Box)`
-  background-color: #053e5c;
-  padding: 30px;
-`;
+
 const IconBtn = styled(IconButton)`
   &:hover {
     transform: scale(1.2);
-  }
-`;
-const FooterImage = styled("img")`
-  height: 45px;
-  width: 140px;
-  margin: 10px;
-  user-select: none;
-`;
-
-const Heading = styled(Typography)`
-  color: white;
-  &::after {
-    color: red;
-  }
-  &:hover {
-    transform: scale3d(1.4);
-  }
-`;
-const Item = styled(Typography)`
-  margin: 10px 0px;
-  cursor: pointer;
-  color: white;
-
-  &:hover {
-    padding-left: 20px;
   }
 `;
 

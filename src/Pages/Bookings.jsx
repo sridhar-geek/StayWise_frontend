@@ -35,7 +35,7 @@ const Bookings = () => {
   return (
     <>
       <Box>
-        <Typography>Available Delux Rooms</Typography>
+        {/* <Typography>Available Delux Rooms</Typography>
         <Carousel
           swipeable={false}
           draggable={false}
@@ -47,11 +47,12 @@ const Bookings = () => {
           containerClass="carousel-container"
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
-        >
-          {/* {sendPhotos(photoObj, HotelRoomImages).map((img) => (
+        > */}
+        {/* {sendPhotos(photoObj, HotelRoomImages).map((img) => (
             <Image key={img.photo_id} src={img.url_original} alt="Hotel" />
           ))} */}
-        </Carousel>
+        {/* </Carousel> */}
+        Booking page
       </Box>
     </>
   );

@@ -1,4 +1,4 @@
-import { Box, Typography, styled, Button } from "@mui/material";
+import { Box, Typography, styled, Button, Paper } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { DateRange } from "react-date-range";
@@ -157,7 +157,10 @@ const Home = () => {
       </Box>
           </form>
           <Box>
+            <Typography variant="h4" sx={{margin:'10px 5%'}}>Types rooms Available</Typography>
+            <Paper sx={{height:'30vh', margin:'10px'}} elevation={4}>
 
+            </Paper>
           </Box>
     </>
   );
