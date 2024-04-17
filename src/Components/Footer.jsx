@@ -84,43 +84,19 @@ const Footer = () => {
               <LinkedInIcon />
             </IconBtn>
           </Box>
-          <Container>
-            <Grid container spacing={2}>
-              <Grid item textAlign={"center"} xs={6} md={6} lg={3} xl={3}>
-                <Heading variant="h4">About Us</Heading>
-                <Item>Aim</Item>
-                <Item>Who we are</Item>
-                <Item>Work with us</Item>
+          <Box sx={{ backgroundColor: "#053e5c", color: "#ffff" }}>
+            <Grid container sx={{ margin: "0px 5%", paddingTop:'20px' }}>
+              <Grid item xs={12} sm={12} md={6} lg={3}>
+                <Typography>XYZ Industries</Typography>{" "}
               </Grid>
-              <Grid item textAlign={"center"} xs={6} md={6} lg={3} xl={3}>
-                <Heading variant="h4">For Hotels</Heading>
-                <Item>Patner with us</Item>
-                <Item>List Your Hotel</Item>
-                <Item>Apps for You</Item>
+              <Grid item xs={12} sm={12} md={6} lg={3}>
+                <Typography>Quick Links</Typography>{" "}
               </Grid>
-              <Grid item textAlign={"center"} xs={6} md={6} lg={3} xl={3}>
-                <Heading variant="h4">Learn More</Heading>
-                <Item>Privacy</Item>
-                <Item>Security</Item>
-                <Item>Terms</Item>
+              <Grid item xs={12} sm={12} md={6} lg={3}>
+                <Typography>Customer Support</Typography>{" "}
               </Grid>
-              <Grid item textAlign={"center"} xs={6} md={6} lg={3} xl={3}>
-                <Heading variant="h4">App Links</Heading>
-                <FooterImage
-                  src={Microsoft}
-                  style={{ cursor: "pointer" }}
-                  alt="playStore"
-                />
-                <FooterImage
-                  src={Playstore}
-                  style={{ cursor: "pointer" }}
-                  alt="playStore"
-                />
-                <FooterImage
-                  src={Appstore}
-                  style={{ cursor: "pointer" }}
-                  alt="playStore"
-                />
+              <Grid item xs={12} sm={12} md={6} lg={3}>
+                <Typography>Subscribe Us</Typography>{" "}
               </Grid>
             </Grid>
             <Divider sx={{ margin: 2 }} />
@@ -133,7 +109,7 @@ const Footer = () => {
               © <span style={{ color: "orangered" }}>Stay Wise™</span> Ltd. All
               rights reserved.
             </Typography>
-          </Container>
+          </Box>
         </>
       )}
     </>

@@ -20,7 +20,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 //imports from another files
-import Logo from "../../public/logo.jpg";
+import Logo from "../assests/logo.jpg";
 //component styles
 const Container = styled(Box)`
   display: flex;

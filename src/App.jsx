@@ -6,13 +6,13 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 export const Context = createContext()
 //Imports from another files
 import {Home, Login,SignUp,Bookings,Success,NotFound} from './Pages'
-import Header from './Components/Header';
+import Header from './Components/Header/Header';
 import Theme from './theme';
 import Footer from './Components/Footer';
 
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   return (
     <ThemeProvider theme={Theme}>
       <Context.Provider value={{ user, setUser }}>

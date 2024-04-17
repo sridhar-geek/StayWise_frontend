@@ -20,7 +20,7 @@ import { toast } from "react-toastify";
 import { useContext, useState } from "react";
 //imports from another files
 import { Context } from "../App";
-import Logo from "../../public/logo.jpg";
+import Logo from "../assests/logo.jpg";
 //component styles
 const Container = styled(Box)`
   display: flex;
